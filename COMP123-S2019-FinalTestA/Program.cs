@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace COMP123_S2019_FinalTestA
 {
-    static class Program
+    public static class Program
     {
         public static HeroGenerator heroGenerator;
 
@@ -16,7 +16,7 @@ namespace COMP123_S2019_FinalTestA
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -26,4 +26,9 @@ namespace COMP123_S2019_FinalTestA
             Application.Run(heroGenerator);
         }
     }
+
+	//public static class character
+	{
+	}
+
 }

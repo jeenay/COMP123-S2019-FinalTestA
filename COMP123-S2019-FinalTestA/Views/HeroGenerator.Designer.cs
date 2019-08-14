@@ -41,8 +41,8 @@
 			this.AbilityPage = new System.Windows.Forms.TabPage();
 			this.AbilityTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
 			this.PhysicalAbilitiesLabel = new System.Windows.Forms.Label();
-			this.MentalAbilitiesLabel = new System.Windows.Forms.Label();
 			this.PopularityDataLabel = new System.Windows.Forms.Label();
+			this.MentalAbilitiesLabel = new System.Windows.Forms.Label();
 			this.PsycheDataLabel = new System.Windows.Forms.Label();
 			this.IntuitionDataLabel = new System.Windows.Forms.Label();
 			this.PopularityLabel = new System.Windows.Forms.Label();
@@ -78,13 +78,40 @@
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.NextButton = new System.Windows.Forms.Button();
 			this.BackButton = new System.Windows.Forms.Button();
+			this.lblPowers = new System.Windows.Forms.Label();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.GeneratePowerbtn = new System.Windows.Forms.Button();
+			this.Powertxt = new System.Windows.Forms.TextBox();
+			this.Power2txt = new System.Windows.Forms.TextBox();
+			this.Power3txt = new System.Windows.Forms.TextBox();
+			this.Power4txt = new System.Windows.Forms.TextBox();
+			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.textBox8 = new System.Windows.Forms.TextBox();
+			this.textBox9 = new System.Windows.Forms.TextBox();
+			this.textBox10 = new System.Windows.Forms.TextBox();
+			this.textBox11 = new System.Windows.Forms.TextBox();
+			this.textBox12 = new System.Windows.Forms.TextBox();
+			this.textBox13 = new System.Windows.Forms.TextBox();
+			this.textBox14 = new System.Windows.Forms.TextBox();
+			this.textBox15 = new System.Windows.Forms.TextBox();
+			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.MainTabControl.SuspendLayout();
 			this.IdentityPage.SuspendLayout();
 			this.AbilityPage.SuspendLayout();
 			this.AbilityTableLayoutPanel.SuspendLayout();
+			this.PowersPage.SuspendLayout();
 			this.CharacterSheet.SuspendLayout();
 			this.HeroToolStrip.SuspendLayout();
 			this.HeroMenuStrip.SuspendLayout();
+			this.tableLayoutPanel1.SuspendLayout();
+			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// MainTabControl
@@ -124,6 +151,7 @@
 			this.GenerateNameButton.TabIndex = 2;
 			this.GenerateNameButton.Text = "Generate Name";
 			this.GenerateNameButton.UseVisualStyleBackColor = true;
+			this.GenerateNameButton.Click += new System.EventHandler(this.GenerateNameButton_Click);
 			// 
 			// HeroNameTextBox
 			// 
@@ -242,19 +270,6 @@
 			this.PhysicalAbilitiesLabel.Text = "Physical Abilities";
 			this.PhysicalAbilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// MentalAbilitiesLabel
-			// 
-			this.MentalAbilitiesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.AbilityTableLayoutPanel.SetColumnSpan(this.MentalAbilitiesLabel, 2);
-			this.MentalAbilitiesLabel.Location = new System.Drawing.Point(381, 0);
-			this.MentalAbilitiesLabel.Name = "MentalAbilitiesLabel";
-			this.MentalAbilitiesLabel.Size = new System.Drawing.Size(373, 57);
-			this.MentalAbilitiesLabel.TabIndex = 2;
-			this.MentalAbilitiesLabel.Text = "Mental Abilities";
-			this.MentalAbilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// PopularityDataLabel
 			// 
 			this.PopularityDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -267,6 +282,19 @@
 			this.PopularityDataLabel.Size = new System.Drawing.Size(184, 57);
 			this.PopularityDataLabel.TabIndex = 1;
 			this.PopularityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// MentalAbilitiesLabel
+			// 
+			this.MentalAbilitiesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.AbilityTableLayoutPanel.SetColumnSpan(this.MentalAbilitiesLabel, 2);
+			this.MentalAbilitiesLabel.Location = new System.Drawing.Point(381, 0);
+			this.MentalAbilitiesLabel.Name = "MentalAbilitiesLabel";
+			this.MentalAbilitiesLabel.Size = new System.Drawing.Size(373, 57);
+			this.MentalAbilitiesLabel.TabIndex = 2;
+			this.MentalAbilitiesLabel.Text = "Mental Abilities";
+			this.MentalAbilitiesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// PsycheDataLabel
 			// 
@@ -467,9 +495,13 @@
 			this.GenerateAbilitiesButton.TabIndex = 3;
 			this.GenerateAbilitiesButton.Text = "Generate Abilities";
 			this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
+			this.GenerateAbilitiesButton.Click += new System.EventHandler(this.GenerateAbilitiesButton_Click);
 			// 
 			// PowersPage
 			// 
+			this.PowersPage.Controls.Add(this.GeneratePowerbtn);
+			this.PowersPage.Controls.Add(this.tableLayoutPanel1);
+			this.PowersPage.Controls.Add(this.lblPowers);
 			this.PowersPage.Location = new System.Drawing.Point(4, 38);
 			this.PowersPage.Name = "PowersPage";
 			this.PowersPage.Padding = new System.Windows.Forms.Padding(3);
@@ -480,6 +512,7 @@
 			// 
 			// CharacterSheet
 			// 
+			this.CharacterSheet.Controls.Add(this.tableLayoutPanel2);
 			this.CharacterSheet.Controls.Add(this.HeroToolStrip);
 			this.CharacterSheet.Controls.Add(this.HeroMenuStrip);
 			this.CharacterSheet.Location = new System.Drawing.Point(4, 38);
@@ -522,6 +555,7 @@
 			this.saveToolStripButton.Name = "saveToolStripButton";
 			this.saveToolStripButton.Size = new System.Drawing.Size(29, 24);
 			this.saveToolStripButton.Text = "&Save";
+			this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
@@ -572,13 +606,14 @@
 			this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
 			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.openToolStripMenuItem.Text = "&Open";
+			this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator
 			// 
 			this.toolStripSeparator.Name = "toolStripSeparator";
-			this.toolStripSeparator.Size = new System.Drawing.Size(178, 6);
+			this.toolStripSeparator.Size = new System.Drawing.Size(221, 6);
 			// 
 			// saveToolStripMenuItem
 			// 
@@ -586,18 +621,19 @@
 			this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
 			this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-			this.saveToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.saveToolStripMenuItem.Text = "&Save";
+			this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator2
 			// 
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(178, 6);
+			this.toolStripSeparator2.Size = new System.Drawing.Size(221, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.exitToolStripMenuItem.Text = "E&xit";
 			// 
 			// helpToolStripMenuItem
@@ -634,6 +670,298 @@
 			this.BackButton.UseVisualStyleBackColor = true;
 			this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
 			// 
+			// lblPowers
+			// 
+			this.lblPowers.AutoSize = true;
+			this.lblPowers.BackColor = System.Drawing.Color.LightGray;
+			this.lblPowers.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPowers.Location = new System.Drawing.Point(42, 38);
+			this.lblPowers.Name = "lblPowers";
+			this.lblPowers.Size = new System.Drawing.Size(137, 39);
+			this.lblPowers.TabIndex = 0;
+			this.lblPowers.Text = "Powers";
+			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 4;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.Controls.Add(this.Powertxt, 0, 0);
+			this.tableLayoutPanel1.Controls.Add(this.Power2txt, 0, 1);
+			this.tableLayoutPanel1.Controls.Add(this.Power3txt, 0, 2);
+			this.tableLayoutPanel1.Controls.Add(this.Power4txt, 0, 3);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 103);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 4;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(668, 212);
+			this.tableLayoutPanel1.TabIndex = 1;
+			// 
+			// GeneratePowerbtn
+			// 
+			this.GeneratePowerbtn.Location = new System.Drawing.Point(462, 342);
+			this.GeneratePowerbtn.Name = "GeneratePowerbtn";
+			this.GeneratePowerbtn.Size = new System.Drawing.Size(234, 48);
+			this.GeneratePowerbtn.TabIndex = 2;
+			this.GeneratePowerbtn.Text = "Generate Powers";
+			this.GeneratePowerbtn.UseVisualStyleBackColor = true;
+			this.GeneratePowerbtn.Click += new System.EventHandler(this.GeneratePowerbtn_Click);
+			// 
+			// Powertxt
+			// 
+			this.Powertxt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.Powertxt.Location = new System.Drawing.Point(3, 3);
+			this.Powertxt.Name = "Powertxt";
+			this.Powertxt.Size = new System.Drawing.Size(161, 34);
+			this.Powertxt.TabIndex = 0;
+			// 
+			// Power2txt
+			// 
+			this.Power2txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.Power2txt.Location = new System.Drawing.Point(3, 56);
+			this.Power2txt.Name = "Power2txt";
+			this.Power2txt.Size = new System.Drawing.Size(161, 34);
+			this.Power2txt.TabIndex = 0;
+			// 
+			// Power3txt
+			// 
+			this.Power3txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.Power3txt.Location = new System.Drawing.Point(3, 109);
+			this.Power3txt.Name = "Power3txt";
+			this.Power3txt.Size = new System.Drawing.Size(161, 34);
+			this.Power3txt.TabIndex = 0;
+			// 
+			// Power4txt
+			// 
+			this.Power4txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.Power4txt.Location = new System.Drawing.Point(3, 162);
+			this.Power4txt.Name = "Power4txt";
+			this.Power4txt.Size = new System.Drawing.Size(161, 34);
+			this.Power4txt.TabIndex = 0;
+			// 
+			// tableLayoutPanel2
+			// 
+			this.tableLayoutPanel2.ColumnCount = 4;
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 0);
+			this.tableLayoutPanel2.Controls.Add(this.textBox2, 0, 1);
+			this.tableLayoutPanel2.Controls.Add(this.textBox3, 0, 2);
+			this.tableLayoutPanel2.Controls.Add(this.textBox4, 0, 3);
+			this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 0);
+			this.tableLayoutPanel2.Controls.Add(this.textBox6, 1, 1);
+			this.tableLayoutPanel2.Controls.Add(this.textBox7, 1, 2);
+			this.tableLayoutPanel2.Controls.Add(this.textBox8, 1, 3);
+			this.tableLayoutPanel2.Controls.Add(this.textBox9, 2, 3);
+			this.tableLayoutPanel2.Controls.Add(this.textBox10, 2, 2);
+			this.tableLayoutPanel2.Controls.Add(this.textBox11, 2, 1);
+			this.tableLayoutPanel2.Controls.Add(this.textBox12, 2, 0);
+			this.tableLayoutPanel2.Controls.Add(this.textBox13, 3, 0);
+			this.tableLayoutPanel2.Controls.Add(this.textBox14, 3, 1);
+			this.tableLayoutPanel2.Controls.Add(this.textBox15, 3, 2);
+			this.tableLayoutPanel2.Controls.Add(this.textBox16, 3, 3);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 86);
+			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+			this.tableLayoutPanel2.RowCount = 4;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(731, 297);
+			this.tableLayoutPanel2.TabIndex = 2;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox1.Location = new System.Drawing.Point(3, 3);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(176, 27);
+			this.textBox1.TabIndex = 0;
+			// 
+			// textBox2
+			// 
+			this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox2.Location = new System.Drawing.Point(3, 77);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.Size = new System.Drawing.Size(176, 27);
+			this.textBox2.TabIndex = 0;
+			// 
+			// textBox3
+			// 
+			this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox3.Location = new System.Drawing.Point(3, 151);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(176, 27);
+			this.textBox3.TabIndex = 0;
+			// 
+			// textBox4
+			// 
+			this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox4.Location = new System.Drawing.Point(3, 225);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(176, 27);
+			this.textBox4.TabIndex = 0;
+			// 
+			// textBox5
+			// 
+			this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox5.Location = new System.Drawing.Point(185, 3);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(176, 27);
+			this.textBox5.TabIndex = 0;
+			// 
+			// textBox6
+			// 
+			this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox6.Location = new System.Drawing.Point(185, 77);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(176, 27);
+			this.textBox6.TabIndex = 0;
+			// 
+			// textBox7
+			// 
+			this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox7.Location = new System.Drawing.Point(185, 151);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new System.Drawing.Size(176, 27);
+			this.textBox7.TabIndex = 0;
+			// 
+			// textBox8
+			// 
+			this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox8.Location = new System.Drawing.Point(185, 225);
+			this.textBox8.Name = "textBox8";
+			this.textBox8.Size = new System.Drawing.Size(176, 27);
+			this.textBox8.TabIndex = 0;
+			// 
+			// textBox9
+			// 
+			this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox9.Location = new System.Drawing.Point(367, 225);
+			this.textBox9.Name = "textBox9";
+			this.textBox9.Size = new System.Drawing.Size(176, 27);
+			this.textBox9.TabIndex = 0;
+			// 
+			// textBox10
+			// 
+			this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox10.Location = new System.Drawing.Point(367, 151);
+			this.textBox10.Name = "textBox10";
+			this.textBox10.Size = new System.Drawing.Size(176, 27);
+			this.textBox10.TabIndex = 0;
+			// 
+			// textBox11
+			// 
+			this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox11.Location = new System.Drawing.Point(367, 77);
+			this.textBox11.Name = "textBox11";
+			this.textBox11.Size = new System.Drawing.Size(176, 27);
+			this.textBox11.TabIndex = 0;
+			// 
+			// textBox12
+			// 
+			this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox12.Location = new System.Drawing.Point(367, 3);
+			this.textBox12.Name = "textBox12";
+			this.textBox12.Size = new System.Drawing.Size(176, 27);
+			this.textBox12.TabIndex = 0;
+			// 
+			// textBox13
+			// 
+			this.textBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox13.Location = new System.Drawing.Point(549, 3);
+			this.textBox13.Name = "textBox13";
+			this.textBox13.Size = new System.Drawing.Size(179, 27);
+			this.textBox13.TabIndex = 0;
+			// 
+			// textBox14
+			// 
+			this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox14.Location = new System.Drawing.Point(549, 77);
+			this.textBox14.Name = "textBox14";
+			this.textBox14.Size = new System.Drawing.Size(179, 27);
+			this.textBox14.TabIndex = 0;
+			// 
+			// textBox15
+			// 
+			this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox15.Location = new System.Drawing.Point(549, 151);
+			this.textBox15.Name = "textBox15";
+			this.textBox15.Size = new System.Drawing.Size(179, 27);
+			this.textBox15.TabIndex = 0;
+			// 
+			// textBox16
+			// 
+			this.textBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox16.Location = new System.Drawing.Point(549, 225);
+			this.textBox16.Name = "textBox16";
+			this.textBox16.Size = new System.Drawing.Size(179, 27);
+			this.textBox16.TabIndex = 0;
+			// 
 			// HeroGenerator
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -649,12 +977,18 @@
 			this.IdentityPage.PerformLayout();
 			this.AbilityPage.ResumeLayout(false);
 			this.AbilityTableLayoutPanel.ResumeLayout(false);
+			this.PowersPage.ResumeLayout(false);
+			this.PowersPage.PerformLayout();
 			this.CharacterSheet.ResumeLayout(false);
 			this.CharacterSheet.PerformLayout();
 			this.HeroToolStrip.ResumeLayout(false);
 			this.HeroToolStrip.PerformLayout();
 			this.HeroMenuStrip.ResumeLayout(false);
 			this.HeroMenuStrip.PerformLayout();
+			this.tableLayoutPanel1.ResumeLayout(false);
+			this.tableLayoutPanel1.PerformLayout();
+			this.tableLayoutPanel2.ResumeLayout(false);
+			this.tableLayoutPanel2.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -710,5 +1044,29 @@
         private System.Windows.Forms.Label StrengthDataLabel;
         private System.Windows.Forms.Label FightingDataLabel;
         private System.Windows.Forms.Button GenerateAbilitiesButton;
-    }
+		private System.Windows.Forms.Button GeneratePowerbtn;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.TextBox Powertxt;
+		private System.Windows.Forms.TextBox Power2txt;
+		private System.Windows.Forms.TextBox Power3txt;
+		private System.Windows.Forms.TextBox Power4txt;
+		private System.Windows.Forms.Label lblPowers;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox textBox7;
+		private System.Windows.Forms.TextBox textBox8;
+		private System.Windows.Forms.TextBox textBox9;
+		private System.Windows.Forms.TextBox textBox10;
+		private System.Windows.Forms.TextBox textBox11;
+		private System.Windows.Forms.TextBox textBox12;
+		private System.Windows.Forms.TextBox textBox13;
+		private System.Windows.Forms.TextBox textBox14;
+		private System.Windows.Forms.TextBox textBox15;
+		private System.Windows.Forms.TextBox textBox16;
+	}
 }
