@@ -46,5 +46,7 @@ namespace COMP123_S2019_FinalTestA.Views
                 MainTabControl.SelectedIndex++;
             }
         }
-    }
+
+
+	}
 }
