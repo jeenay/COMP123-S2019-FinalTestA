@@ -81,12 +81,21 @@ namespace COMP123_S2019_FinalTestA.Views
 			int no = rand1.Next(Lines.Length);
 			Program.heroGenerator.LastNameDataLabel.Text = lines[no];
 		}
-
+		/// <summary>
+		/// This is an click event for generating names
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
         private void GenerateNameButton_Click(object sender, EventArgs e)
 		{
 			GenerateNames();
 		}
 
+		/// <summary>
+		/// This is a click event for Generating abilities 
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
 		{
 			Random random = new Random();
